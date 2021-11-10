@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 echo Lets install wordpress
-cd /home/pankaj/Downloads/
+cd ~/Downloads/
 rm -rf latest.tar.gz
 rm -rf latest
 wget http://wordpress.org/latest.tar.gz
@@ -10,7 +10,6 @@ tar -zxvf latest.tar.gz
 echo Please enter the name of the new project
 read NAME
 mv wordpress "$NAME"
-ls
 cp -r $NAME /var/www/html/
 cd /var/www/html/"$NAME"
 echo Please enter username for mysql or phpmyadmin
