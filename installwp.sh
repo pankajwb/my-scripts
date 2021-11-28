@@ -6,7 +6,7 @@ rm -rf latest.tar.gz
 rm -rf latest
 wget http://wordpress.org/latest.tar.gz
 echo download finished
-tar -zxvf latest.tar.gz
+tar -zxf latest.tar.gz
 echo Please enter the name of the new project
 read NAME
 mv wordpress "$NAME"
