@@ -15,7 +15,7 @@ then
 else
 	mkdir databases
 	mv *.sql databases
-        mv *.sql.gz databases
+	mv *.sql.gz databases
 	mv *.sql.* databases
 fi
 
@@ -29,7 +29,7 @@ then
 else
 	mkdir zips_n_tars
 	mv *.zip zips_n_tars
-        mv *.tar.* zips_n_tars
+	mv *.tar.* zips_n_tars
 fi
 echo "-"
 echo "-"
@@ -44,9 +44,9 @@ then
 else
 	mkdir images
 	mv *.jpg images
-        mv *.png images
-        mv *.jpeg images
-        mv *.gif images
+	mv *.png images
+	mv *.jpeg images
+	mv *.gif images
 fi
 echo "-"
 echo "-"
@@ -54,12 +54,44 @@ echo "-"
 echo "Cleaning Videos. Moving to videos directory"
 if [ -d "videos" ]
 then
-        mv *.mp4 videos
-        mv *.mkv videos
+    mv *.mp4 videos
+    mv *.mkv videos
 else
-        mkdir videos
+	mkdir videos
 	mv *.mp4 videos
-        mv *.mkv videos
+	mv *.mkv videos
+fi
+echo "-"
+echo "-"
+echo "-"
+echo "Cleaning docs. Moving to docs directory"
+if [ -d "docs" ]
+then
+	mv *.doc docs
+	mv *.docx docs
+	mv *.odt docs
+	mv *.pdf docs
+	mv *.xls docs
+	mv *.xlsx docs
+else
+	mkdir docs
+	mv *.doc docs
+	mv *.docx docs
+	mv *.odt docs
+	mv *.pdf docs
+	mv *.xls docs
+	mv *.xlsx docs
+fi
+echo "-"
+echo "-"
+echo "-"
+echo "Cleaning deb-packages. Moving to deb_packs directory"
+if [ -d "deb_packs" ]
+then
+    mv *.deb deb_packs
+else
+	mkdir deb_packs
+	mv *.deb deb_packs
 fi
 echo "---"
 echo " | "
